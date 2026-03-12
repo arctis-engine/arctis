@@ -1,0 +1,4 @@
+Task: Hello World. Module: none. Description: Create a Python file that prints 'Hello Arctic'.. Context:
+No context.
+
+Instruction: Produce ONLY the complete and final Python code. Start directly with the first line of code. No explanations. No markdown. No backticks. No comments except docstrings.

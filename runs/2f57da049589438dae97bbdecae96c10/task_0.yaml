@@ -1,0 +1,8 @@
+description: Create a minimal Flask app with one route returning 'Hello from Arctic
+  OS'.
+id: t1
+meta: {}
+module: null
+name: Create Flask App
+target_file: app.py
+type: raw

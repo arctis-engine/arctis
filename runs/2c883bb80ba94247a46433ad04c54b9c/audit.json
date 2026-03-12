@@ -1,0 +1,10 @@
+{
+  "run_id": "2c883bb80ba94247a46433ad04c54b9c",
+  "task_id": "patch_flask_get_env",
+  "input_hash": "",
+  "seed": 0,
+  "snapshot_path": "runs/2c883bb80ba94247a46433ad04c54b9c/codebase_manifest.json",
+  "status": "failed",
+  "failure_mode": "io_error",
+  "files": []
+}

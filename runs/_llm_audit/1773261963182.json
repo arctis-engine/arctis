@@ -1,0 +1,16 @@
+{
+  "model": "llama3.1:8b",
+  "seed": 1439570336,
+  "json_mode": false,
+  "prompt_length": 1215,
+  "prompt_hash": "36e9bd4e0c6c81ed18dac03deacf71f34e91f5a8af4346ff136587cd86ff9e73",
+  "attempts": [
+    {
+      "attempt": 1,
+      "latency_s": 11.003,
+      "status": "success",
+      "response_length": 30
+    }
+  ],
+  "result": "success"
+}

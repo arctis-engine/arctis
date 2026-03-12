@@ -1,0 +1,14 @@
+{
+  "run_id": "2b49e68013804dcfa5b5b77e43f5713e",
+  "task_id": "test_multi",
+  "input_hash": "4179ff47fe6abafdfa1eed7866568a97b10363b93d5ccdcaba098ddfce118694",
+  "seed": 1439570336,
+  "snapshot_path": "runs/2b49e68013804dcfa5b5b77e43f5713e/codebase_manifest.json",
+  "status": "success",
+  "failure_mode": null,
+  "files": [
+    "core/utils/a.py",
+    "core/utils/b.py",
+    "core/utils/c.py"
+  ]
+}

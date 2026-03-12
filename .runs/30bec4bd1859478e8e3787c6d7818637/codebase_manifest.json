@@ -1,0 +1,176 @@
+{
+  "files": [
+    {
+      "path": "__init__.py",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "brains/__init__.py",
+      "hash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "brains/code_brain.py",
+      "hash": "68731029cccab825e015c04250dc1fc2166371f0fc2e85ea9e92ac8fbe9ae2f8"
+    },
+    {
+      "path": "core/__init__.py",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "core/audit.py",
+      "hash": "21482895b8cdcb57adc65f050c0d116b57453455d85465c94fe76de359b2f1c4"
+    },
+    {
+      "path": "core/codebase.py",
+      "hash": "223250fc19c5a92dcae71789284ee5ca3e1e59e5a90633bf16ab245d8ad70289"
+    },
+    {
+      "path": "core/context_manager.py",
+      "hash": "9fa83b487eea42a0c5c06e46c50746265015693a29b0f7783c5e96f3c5e2d8ac"
+    },
+    {
+      "path": "core/create_hello.py",
+      "hash": "4cf7297542fc22b415741a7531032faf8348b046ccf01c26a495659193319e60"
+    },
+    {
+      "path": "core/failures.py",
+      "hash": "ed8dadae31de6889dcca54c24e3615da3999b2cdaebbf72edb7556d547753cc4"
+    },
+    {
+      "path": "core/hello.py",
+      "hash": "0bb10869c03d301a3c4d75fa84c91ab1cfe197fda098bf8d80e37e19982a2dfa"
+    },
+    {
+      "path": "core/llm_client.py",
+      "hash": "a6ceddf21512e343618acca25bd9da72e4b78bff73c1ad97ebb0f4ae6b1b659b"
+    },
+    {
+      "path": "core/llm_utils.py",
+      "hash": "ae94d5f6a085ba894d0be17cd9f398aef9bac2b288e0d661cf9ded186a09a06f"
+    },
+    {
+      "path": "core/models.py",
+      "hash": "bbd7633d418193a35888ef4023a69599492e170c2fcccfe6a241a011f0f83731"
+    },
+    {
+      "path": "core/orchestrator.py",
+      "hash": "7072ed55992782871828362e2c637d10e55d609fd425143a71114b6960a0d989"
+    },
+    {
+      "path": "core/patcher.py",
+      "hash": "b50f7022788f0cbf04880db2e487d347c009c7f7e8e37be033fd0b592cba0403"
+    },
+    {
+      "path": "core/plugins/__init__.py",
+      "hash": "f14ad31ec714ff9c3954f80b603570c5d12340aff51ed85d54119e6d9985185e"
+    },
+    {
+      "path": "core/plugins/base.py",
+      "hash": "78ad3eb2fec3a1b32a0286bb60b5f79f884431757472c240d2f1ad1822a2a077"
+    },
+    {
+      "path": "core/plugins/codegen_module.py",
+      "hash": "6dd0fc007c3c5b78dd866228985cadb4df64a43d9488e506690f5d67367d3c3f"
+    },
+    {
+      "path": "core/plugins/codegen_single.py",
+      "hash": "bcc5018d06b3662a8b8a37f2fd878bd5ab7ea78178776c6f2e8c639b5a7b08b8"
+    },
+    {
+      "path": "core/plugins/registry.py",
+      "hash": "7bc69ce9a1fec2a269a5bbc49615d7c58b2cc48155fbeef33b5d9d031011d773"
+    },
+    {
+      "path": "core/prompts.py",
+      "hash": "84292c3788162e8ccee3f6844c09ae8743f91a78661402664b12fc2104b2457e"
+    },
+    {
+      "path": "core/spec_engine.py",
+      "hash": "8b92b39c07f4a1b62277f2836c93096a577328d8697b190e121db7a773726e1f"
+    },
+    {
+      "path": "core/test_single.py",
+      "hash": "f69962c62831bee1dc5ce676f3e4ea55923e75951965da782672a271bde8fb17"
+    },
+    {
+      "path": "core/utils/a.py",
+      "hash": "fa48a0a4236e308ab4c03722cc644a8096d2a8216eaa3d0d4e6f4ca91730295a"
+    },
+    {
+      "path": "core/utils/b.py",
+      "hash": "e181dde1ee773505dc9197179dcd02c8fc052dadad314d73f9cf1b75cae90ce3"
+    },
+    {
+      "path": "core/utils/c.py",
+      "hash": "630b2b4148996b170081a2a8dab3cb1085c5f667b905e267f25eefc9aa7a089a"
+    },
+    {
+      "path": "core/validator.py",
+      "hash": "aa16278bd5b31ec9fdd1cdcc7533c291161faf6b0ce5e4b922ed50a71a89af08"
+    },
+    {
+      "path": "core/validators/__init__.py",
+      "hash": "c1596963aa7065603d4c22173620cb7b4d3735b1ae7d8bd38fc83e4c88760a7c"
+    },
+    {
+      "path": "core/validators/imports.py",
+      "hash": "cee5c0869cba076b69ac6f7f99f1ee962eb0939ec92e365262bd2e32ed6751bf"
+    },
+    {
+      "path": "core/validators/naming.py",
+      "hash": "29553ce8c8cb9bb4627b5f3865d1579440f3ca62c4ad946d8facb0aab01fdd2d"
+    },
+    {
+      "path": "core/validators/structure.py",
+      "hash": "5da8cbaac0a2fb04486ac4b532d656b788ea7cac275be1d852a91853393ba56d"
+    },
+    {
+      "path": "core/validators/syntax.py",
+      "hash": "90486275193b0909bfee00e9860d05737c9b0d78dcedbf903b30c84dd49dedfa"
+    },
+    {
+      "path": "module.py",
+      "hash": "f69962c62831bee1dc5ce676f3e4ea55923e75951965da782672a271bde8fb17"
+    },
+    {
+      "path": "sandbox/example.py",
+      "hash": "ba1a531f581d2e6094e978ed6f7aca7a8d92eeb62c6e7ad73ee692f7f18bc772"
+    },
+    {
+      "path": "sandbox/run_single.py",
+      "hash": "8ac2af5fed08e7e1242b2a8e395722592da25929c2c5c4beba24fff091147bdb"
+    },
+    {
+      "path": "tasks/create_hello.py",
+      "hash": "0e4498cab1b3d22cfe8b6b449034a0c17fcf492fc47c9f3e44a2460eb2c52e6e"
+    },
+    {
+      "path": "tasks/patch_flask_get_env.py",
+      "hash": "ff54b8bfda5adbcc2510daf6a73f0232d6f6aad55d5860159cb92fa6cb5c62d7"
+    },
+    {
+      "path": "tests/__init__.py",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/conftest.py",
+      "hash": "ac2c799f589dd580e1ed63a40a18afc3698ba5069285db0db6190e911f85a0c8"
+    },
+    {
+      "path": "tests/real_flask_task.py",
+      "hash": "9a144849ee8b5b3ba2e73a806ff43b69134e52b069d29c4aee8fc5bae7f25524"
+    },
+    {
+      "path": "tests/test_multi.py",
+      "hash": "9cc3d59d02568029a1eb59beb34ada84636af0eef74606d2d47f75dced1e5678"
+    },
+    {
+      "path": "tests/test_orchestrator_end_to_end.py",
+      "hash": "cec15ee3b032dc9189ba87b8f92103c71138aeb2ebbb9a57daf42d02801cdf10"
+    },
+    {
+      "path": "tests/test_validators.py",
+      "hash": "d1184ab3f30eaf138f219aa88265ca57432d9fa462dd721dac1220b1f715d49f"
+    }
+  ]
+}

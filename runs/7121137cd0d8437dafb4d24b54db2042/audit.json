@@ -1,0 +1,12 @@
+{
+  "run_id": "7121137cd0d8437dafb4d24b54db2042",
+  "task_id": "test_task",
+  "input_hash": "66534bc0c9a7c119460c341ad63ad8c6e67dd797b9fe2c96f8c21acffe93ffbe",
+  "seed": 91779372,
+  "snapshot_path": "runs/7121137cd0d8437dafb4d24b54db2042/codebase_manifest.json",
+  "status": "success",
+  "failure_mode": null,
+  "files": [
+    "module.py"
+  ]
+}

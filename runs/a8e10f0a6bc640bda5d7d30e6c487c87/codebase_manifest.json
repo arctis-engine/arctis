@@ -1,0 +1,16 @@
+{
+  "files": [
+    {
+      "path": "app.py",
+      "hash": "e10df44efc0b18e77d54ae61290668d09fd2b4efa71d052e29ef9e54f502ac73"
+    },
+    {
+      "path": "specs/naming.yaml",
+      "hash": "add2a2f0c5cc5345edcf909792833b6ae28b23880f586f9cb45efbd92217a7ff"
+    },
+    {
+      "path": "specs/structure.yaml",
+      "hash": "4ba67fb46bd4b3228ffc76e4e6e3a65e3b8976a7cbf09e7cba0a8062a18db21d"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "files": [
+    {
+      "path": "src/flask/helpers.py",
+      "content": "from typing import Any, Iterator, Optional, Union\n\ndef get_env(key: str, default: Optional[Any] = None) -> Any:\n    \"\"\"Get the value of an environment variable with the given key. If the\n    environment variable is not set, return the default value.\n\n    :param key: The key of the environment variable.\n    :param default: The default value to return if the environment variable is not set.\n    :return: The value of the environment variable or the default value.\n    \"\"\"\n    return os.getenv(key, default)"
+    }
+  ]
+}

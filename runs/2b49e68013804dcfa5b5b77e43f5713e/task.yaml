@@ -1,0 +1,9 @@
+description: Erstelle eine Funktion c() -> str
+files:
+  core/utils/a.py: Erstelle eine Funktion a() -> str
+  core/utils/b.py: Erstelle eine Funktion b() -> str
+  core/utils/c.py: Erstelle eine Funktion c() -> str
+module: core/utils
+name: test_multi::core/utils/c.py
+target_file: core/utils/c.py
+type: codegen.module

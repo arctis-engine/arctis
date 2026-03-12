@@ -1,0 +1,5 @@
+base_hash: null
+diff: ''
+new_content: "import os\n\ndef improve_get_env():\n    \"\"\"\n    Returns the environment\
+  \ variables as a dictionary.\n    \n    :return: dict\n    \"\"\"\n    return dict(os.environ)"
+target_file: flask/helpers.py

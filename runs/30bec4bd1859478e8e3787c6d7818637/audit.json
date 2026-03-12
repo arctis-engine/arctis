@@ -1,0 +1,10 @@
+{
+  "run_id": "30bec4bd1859478e8e3787c6d7818637",
+  "task_id": "test_single",
+  "input_hash": "",
+  "seed": 0,
+  "snapshot_path": "runs/30bec4bd1859478e8e3787c6d7818637/codebase_manifest.json",
+  "status": "failed",
+  "failure_mode": "io_error",
+  "files": []
+}

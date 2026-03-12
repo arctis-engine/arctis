@@ -1,0 +1,4 @@
+Task: Refactor add. Module: none. Description: Refactor the function add() to include type hints and a docstring.. Context:
+No context.
+
+Instruction: Produce ONLY the complete and final Python code. Start directly with the first line of code. No explanations. No markdown. No backticks. No comments except docstrings.

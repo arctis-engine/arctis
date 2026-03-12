@@ -1,0 +1,18 @@
+## Task
+Name: test_single::core/test_single.py
+Module: 
+Description: Erstelle eine Funktion foo() -> str, die 'OK' zurückgibt.
+
+## Context
+No context files provided.
+
+
+## Effective Rules
+- No rules defined.
+
+## Instruction
+Write ONLY the complete code.
+No explanations.
+No markdown.
+No backticks.
+Strictly follow ALL rules.

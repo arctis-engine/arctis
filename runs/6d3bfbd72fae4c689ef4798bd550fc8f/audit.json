@@ -1,0 +1,12 @@
+{
+  "run_id": "6d3bfbd72fae4c689ef4798bd550fc8f",
+  "task_id": "improve_get_env",
+  "input_hash": "2001be06e16bcad263558bf4838ee270a314d635d724614ab5d860c21e521355",
+  "seed": 4188202187,
+  "snapshot_path": "runs/6d3bfbd72fae4c689ef4798bd550fc8f/codebase_manifest.json",
+  "status": "failed",
+  "failure_mode": "validation_exception",
+  "files": [
+    "src/flask/helpers.py"
+  ]
+}

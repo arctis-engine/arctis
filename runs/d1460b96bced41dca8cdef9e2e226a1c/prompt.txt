@@ -1,0 +1,30 @@
+## Task
+Name: improve_get_env::src/flask/helpers.py
+Module: flask
+Description: Improve the existing get_env() function in src/flask/helpers.py. Add type hints, a clear docstring, and improve readability. Do NOT change behavior. Do NOT rename the function. Modify ONLY the get_env() function. Return the complete file with only get_env() improved.
+
+## Context
+# File: src/flask/helpers.py
+from typing import Any, Iterator, Optional, Union
+
+def get_env(key: str, default: Optional[Any] = None) -> Any:
+    """Get the value of an environment variable with the given key. If the
+    environment variable is not set, return the default value.
+
+    :param key: The key of the environment variable.
+    :param default: The default value to return if the environment variable is not set.
+    :return: The value of the environment variable or the default value.
+    """
+    return os.getenv(key, default)
+
+
+## Effective Rules
+- No rules defined.
+
+## Instruction
+Write ONLY the complete code.
+No explanations.
+No markdown.
+No backticks.
+Start directly with the first line of code.
+Strictly follow ALL rules.

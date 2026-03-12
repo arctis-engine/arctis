@@ -1,0 +1,7 @@
+description: Fix all syntax errors in the file.
+id: t3
+meta: {}
+module: null
+name: Fix broken code
+target_file: broken.py
+type: codegen.file

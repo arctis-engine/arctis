@@ -1,0 +1,11 @@
+from typing import Any, Iterator, Optional, Union
+
+def get_env(key: str, default: Optional[Any] = None) -> Any:
+    """Get the value of an environment variable with the given key. If the
+    environment variable is not set, return the default value.
+
+    :param key: The key of the environment variable.
+    :param default: The default value to return if the environment variable is not set.
+    :return: The value of the environment variable or the default value.
+    """
+    return os.getenv(key, default)

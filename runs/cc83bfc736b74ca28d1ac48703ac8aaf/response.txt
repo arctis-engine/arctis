@@ -1,0 +1,24 @@
+```python
+from flask import Flask, request, Response, stream_with_context, make_response
+
+app = Flask(__name__)
+
+@app.route('/stream', methods=['GET'])
+def streamed_response():
+    @stream_with_context
+    def generate():
+        yield "Hello "
+        yield request.args["name"]
+        yield "!"
+
+    return Response(generate())
+
+@app.route('/make_response', methods=['GET'])
+def make_response_example():
+    response = make_response(render_template('index.html', foo=42))
+    response.headers['X-Parachutes'] = 'parachutes are cool'
+    return response
+
+if __name__ == "__main__":
+    app.run(debug=True)
+```

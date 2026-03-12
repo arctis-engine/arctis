@@ -1,0 +1,15 @@
+{
+  "run_id": "56ac9568419b482c857f12d5d1c81267",
+  "task_id": "t4",
+  "input_hash": "57e18cab8ee73be40bd78014d2bde5670899b8c89e38b099fe55263c05fe9566",
+  "seed": 3379966456,
+  "snapshot_path": "runs/56ac9568419b482c857f12d5d1c81267/codebase_manifest.json",
+  "status": "success",
+  "failure_mode": null,
+  "files": [
+    {
+      "path": "large_file.py"
+    }
+  ],
+  "meta": {}
+}

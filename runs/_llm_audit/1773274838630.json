@@ -1,0 +1,16 @@
+{
+  "model": "qwen2.5-coder:latest",
+  "seed": 897997079,
+  "json_mode": false,
+  "prompt_length": 2008,
+  "prompt_hash": "63ad8adbf37045527c50b097d7d74088dea9a7a0e21a15552299cc74a830e026",
+  "attempts": [
+    {
+      "attempt": 1,
+      "latency_s": 91.499,
+      "status": "success",
+      "response_length": 480
+    }
+  ],
+  "result": "success"
+}

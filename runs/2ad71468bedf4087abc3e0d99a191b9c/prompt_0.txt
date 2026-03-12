@@ -1,0 +1,4 @@
+Task: Create module. Module: none. Description: Create a simple Python module with two files: utils.py containing a function greet(name), and main.py that imports greet and prints the greeting.. Context:
+No context.
+
+Instruction: Produce ONLY the complete and final Python code. Start directly with the first line of code. No explanations. No markdown. No backticks. No comments except docstrings.

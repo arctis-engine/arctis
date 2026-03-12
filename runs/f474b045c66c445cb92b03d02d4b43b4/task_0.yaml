@@ -1,0 +1,7 @@
+description: Refactor the function add() to include type hints and a docstring.
+id: t2
+meta: {}
+module: null
+name: Refactor add
+target_file: math_utils.py
+type: codegen.file

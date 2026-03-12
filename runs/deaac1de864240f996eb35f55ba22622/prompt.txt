@@ -1,0 +1,219 @@
+## Task
+Name: improve_get_env::src/flask/helpers.py
+Module: flask
+Description: Improve the existing get_env() function in src/flask/helpers.py. Add type hints, a clear docstring, and improve readability. Do NOT change behavior. Do NOT rename the function. Modify ONLY the get_env() function. Return the complete file with only get_env() improved.
+
+## Context
+# File: src/flask/helpers.py
+from __future__ import annotations
+
+import importlib.util
+import os
+import sys
+import typing as t
+from datetime import datetime
+from functools import cache
+from functools import update_wrapper
+from types import TracebackType
+
+import werkzeug.utils
+from werkzeug.exceptions import abort as _wz_abort
+from werkzeug.utils import redirect as _wz_redirect
+from werkzeug.wrappers import Response as BaseResponse
+
+from .globals import _cv_app
+from .globals import app_ctx
+from .globals import current_app
+from .globals import request
+from .globals import session
+from .signals import message_flashed
+
+if t.TYPE_CHECKING:  # pragma: no cover
+    from .wrappers import Response
+
+
+def get_debug_flag() -> bool:
+    """Get whether debug mode should be enabled for the app, indicated by the
+    :envvar:`FLASK_DEBUG` environment variable. The default is ``False``.
+    """
+    val = os.environ.get("FLASK_DEBUG")
+    return bool(val and val.lower() not in {"0", "false", "no"})
+
+
+def get_load_dotenv(default: bool = True) -> bool:
+    """Get whether the user has disabled loading default dotenv files by
+    setting :envvar:`FLASK_SKIP_DOTENV`. The default is ``True``, load
+    the files.
+
+    :param default: What to return if the env var isn't set.
+    """
+    val = os.environ.get("FLASK_SKIP_DOTENV")
+
+    if not val:
+        return default
+
+    return val.lower() in ("0", "false", "no")
+
+
+@t.overload
+def stream_with_context(
+    generator_or_function: t.Iterator[t.AnyStr],
+) -> t.Iterator[t.AnyStr]: ...
+
+
+@t.overload
+def stream_with_context(
+    generator_or_function: t.Callable[..., t.Iterator[t.AnyStr]],
+) -> t.Callable[[t.Iterator[t.AnyStr]], t.Iterator[t.AnyStr]]: ...
+
+
+def stream_with_context(
+    generator_or_function: t.Iterator[t.AnyStr] | t.Callable[..., t.Iterator[t.AnyStr]],
+) -> t.Iterator[t.AnyStr] | t.Callable[[t.Iterator[t.AnyStr]], t.Iterator[t.AnyStr]]:
+    """Wrap a response generator function so that it runs inside the current
+    request context. This keeps :data:`.request`, :data:`.session`, and :data:`.g`
+    available, even though at the point the generator runs the request context
+    will typically have ended.
+
+    .. warning::
+
+        Due to the following caveat, it is often safer to pass the data you
+        need as arguments to the generator, rather than relying on the context
+        objects.
+
+    More headers cannot be sent after the body has begun. Therefore, you must
+    make sure all headers are set before starting the response. In particular,
+    if the generator will access ``session``, be sure to do so in the view as
+    well so that the ``Vary: cookie`` header will be set. Do not modify the
+    session in the generator, as the ``Set-Cookie`` header will already be sent.
+
+    Use it as a decorator on a generator function:
+
+    .. code-block:: python
+
+        from flask import stream_with_context, request, Response
+
+        @app.get("/stream")
+        def streamed_response():
+            @stream_with_context
+            def generate():
+                yield "Hello "
+                yield request.args["name"]
+                yield "!"
+
+            return Response(generate())
+
+    Or use it as a wrapper around a created generator:
+
+    .. code-block:: python
+
+        from flask import stream_with_context, request, Response
+
+        @app.get("/stream")
+        def streamed_response():
+            def generate():
+                yield "Hello "
+                yield request.args["name"]
+                yield "!"
+
+            return Response(stream_with_context(generate()))
+
+    .. versionadded:: 0.9
+    """
+    try:
+        gen = iter(generator_or_function)  # type: ignore[arg-type]
+    except TypeError:
+
+        def decorator(*args: t.Any, **kwargs: t.Any) -> t.Any:
+            gen = generator_or_function(*args, **kwargs)  # type: ignore[operator]
+            return stream_with_context(gen)
+
+        return update_wrapper(decorator, generator_or_function)  # type: ignore[arg-type]
+
+    def generator() -> t.Iterator[t.AnyStr]:
+        if (ctx := _cv_app.get(None)) is None:
+            raise RuntimeError(
+                "'stream_with_context' can only be used when a request"
+                " context is active, such as in a view function."
+            )
+
+        with ctx:
+            yield None  # type: ignore[misc]
+
+            try:
+                yield from gen
+            finally:
+                # Clean up in case the user wrapped a WSGI iterator.
+                if hasattr(gen, "close"):
+                    gen.close()
+
+    # Execute the generator to the sentinel value. This captures the current
+    # context and pushes it to preserve it. Further iteration will yield from
+    # the original iterator.
+    wrapped_g = generator()
+    next(wrapped_g)
+    return wrapped_g
+
+
+def make_response(*args: t.Any) -> Response:
+    """Sometimes it is necessary to set additional headers in a view.  Because
+    views do not have to return response objects but can return a value that
+    is converted into a response object by Flask itself, it becomes tricky to
+    add headers to it.  This function can be called instead of using a return
+    and you will get a response object which you can use to attach headers.
+
+    If view looked like this and you want to add a new header::
+
+        def index():
+            return render_template('index.html', foo=42)
+
+    You can now do something like this::
+
+        def index():
+            response = make_response(render_template('index.html', foo=42))
+            response.headers['X-Parachutes'] = 'parachutes are cool'
+            return response
+
+    This function accepts the very same arguments you can return from a
+    view function.  This for example creates a response with a 404 error
+    code::
+
+        response = make_response(render_template('not_found.html'), 404)
+
+    The other use case of this function is to force the return value of a
+    view function into a response which is helpful with view
+    decorators::
+
+        response = make_response(view_function())
+        response.headers['X-Parachutes'] = 'parachutes are cool'
+
+    Internally this function does the following things:
+
+    -   if no arguments are passed, it creates a new response argument
+    -   if one argument is passed, :meth:`flask.Flask.make_response`
+        is invoked with it.
+    -   if more than one argument is passed, the arguments are passed
+        to the :meth:`flask.Flask.make_response` function as tuple.
+
+    .. versionadded:: 0.6
+    """
+    if not args:
+        return current_app.response_class()
+    if len(args) == 1:
+        args = args[0]
+    return current_app.make_response(args)
+
+
+def url_for(
+
+
+
+## Effective Rules
+- No rules defined.
+
+## Instruction
+Write ONLY the complete code.
+No explanations.
+No markdown.
+No backticks.
+Strictly follow ALL rules.

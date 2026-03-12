@@ -1,0 +1,4 @@
+description: Erstelle eine Funktion foo() -> str, die 'OK' zurückgibt.
+name: test_single::core/test_single.py
+target_file: core/test_single.py
+type: codegen.single

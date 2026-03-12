@@ -1,0 +1,4 @@
+description: Generate a function
+module: ''
+name: test_task
+target_file: module.py

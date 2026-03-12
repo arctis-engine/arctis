@@ -1,0 +1,4 @@
+Task: test_task. Module: . Description: Generate a function. Context:
+No context.
+
+Instruction: Write only the complete and final Python code. Start directly with the first line of code. No explanations. No markdown. No backticks.

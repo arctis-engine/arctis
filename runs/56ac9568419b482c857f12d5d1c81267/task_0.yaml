@@ -1,0 +1,7 @@
+description: Insert a new function at the top of the file named hello().
+id: t4
+meta: {}
+module: null
+name: Insert function
+target_file: large_file.py
+type: codegen.file

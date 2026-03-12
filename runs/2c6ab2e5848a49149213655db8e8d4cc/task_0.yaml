@@ -1,0 +1,7 @@
+description: Create a Python file that prints 'Hello Arctic'.
+id: t1
+meta: {}
+module: null
+name: Hello World
+target_file: hello.py
+type: codegen.file

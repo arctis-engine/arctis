@@ -1,0 +1,10 @@
+base_hash: 3d20efba9f91ef527ddb90b85cc932e8303a14d029a8c364e5a3da7b394b3552
+diff: ''
+new_content: "from typing import Any\nimport os\n\ndef get_env(key: str, default:\
+  \ Any = None) -> Any:\n    \"\"\"Get the value of an environment variable with the\
+  \ given key. If the\n    environment variable is not set, return the default value.\n\
+  \n    :param key: The key of the environment variable.\n    :param default: The\
+  \ default value to return if the environment variable is not set.\n    :return:\
+  \ The value of the environment variable or the default value.\n    \"\"\"\n    return\
+  \ os.getenv(key, default)"
+target_file: src/flask/helpers.py

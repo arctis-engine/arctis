@@ -1,0 +1,12 @@
+{
+  "run_id": "76814c9934d643a29d45b4e1d0d24e38",
+  "task_id": "test_single",
+  "input_hash": "b4167e2bdd1e61704bdd87f603e46ecbf64d09f6d7d4ebead85c6ed9c50b369e",
+  "seed": 2642785807,
+  "snapshot_path": "runs/76814c9934d643a29d45b4e1d0d24e38/codebase_manifest.json",
+  "status": "success",
+  "failure_mode": null,
+  "files": [
+    "core/test_single.py"
+  ]
+}

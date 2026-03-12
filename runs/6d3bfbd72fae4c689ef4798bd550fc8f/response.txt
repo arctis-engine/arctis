@@ -1,0 +1,20 @@
+```python
+from __future__ import annotations
+
+import os
+from typing import Any, Iterator, Optional, TypeVar, Union
+
+from .globals import current_app
+
+T = TypeVar('T')
+
+def get_env(key: str, default: Optional[T] = None) -> Union[str, T]:
+    """Get the value of an environment variable with the given key. If the
+    environment variable is not set, return the default value.
+
+    :param key: The key of the environment variable.
+    :param default: The default value to return if the environment variable is not set.
+    :return: The value of the environment variable or the default value.
+    """
+    return os.getenv(key, default)
+```

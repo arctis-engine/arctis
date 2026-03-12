@@ -1,0 +1,28 @@
+{
+  "model": "qwen2.5-coder:7b",
+  "seed": 4188202187,
+  "json_mode": false,
+  "prompt_length": 8102,
+  "prompt_hash": "e302e9d29c99774309f555781e385e43202ed7c0efce06d0a4b67f9dd68c8372",
+  "attempts": [
+    {
+      "attempt": 1,
+      "latency_s": 0.022,
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "attempt": 2,
+      "latency_s": 0.003,
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "attempt": 3,
+      "latency_s": 0.003,
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    }
+  ],
+  "result": "failed"
+}

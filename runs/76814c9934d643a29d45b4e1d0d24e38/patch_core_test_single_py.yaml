@@ -1,0 +1,4 @@
+base_hash: a01557bc62fa808cdadf3ef486fd160d8b43941d2e5cadd10c4c9fc73fb0836d
+diff: ''
+new_content: "def foo() -> str:\n    return 'OK'"
+target_file: core/test_single.py

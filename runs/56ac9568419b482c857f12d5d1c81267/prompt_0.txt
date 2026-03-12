@@ -1,0 +1,4 @@
+Task: Insert function. Module: none. Description: Insert a new function at the top of the file named hello().. Context:
+No context.
+
+Instruction: Produce ONLY the complete and final Python code. Start directly with the first line of code. No explanations. No markdown. No backticks. No comments except docstrings.

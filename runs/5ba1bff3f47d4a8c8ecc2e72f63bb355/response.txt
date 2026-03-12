@@ -1,0 +1,9 @@
+import os
+
+def improve_get_env():
+    """
+    Returns the environment variables as a dictionary.
+    
+    :return: dict
+    """
+    return dict(os.environ)

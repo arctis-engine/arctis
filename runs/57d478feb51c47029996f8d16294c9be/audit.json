@@ -1,0 +1,15 @@
+{
+  "run_id": "57d478feb51c47029996f8d16294c9be",
+  "task_id": "t3",
+  "input_hash": "a352d1d6cbdef7d13b7b6965efca7d055b7a0bf1b4634274aadeadeabffed294",
+  "seed": 1645707057,
+  "snapshot_path": "runs/57d478feb51c47029996f8d16294c9be/codebase_manifest.json",
+  "status": "success",
+  "failure_mode": null,
+  "files": [
+    {
+      "path": "broken.py"
+    }
+  ],
+  "meta": {}
+}

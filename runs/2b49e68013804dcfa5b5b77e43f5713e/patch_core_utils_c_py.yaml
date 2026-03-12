@@ -1,0 +1,4 @@
+base_hash: 630b2b4148996b170081a2a8dab3cb1085c5f667b905e267f25eefc9aa7a089a
+diff: ''
+new_content: "def c() -> str:\n    return \"result\""
+target_file: core/utils/c.py

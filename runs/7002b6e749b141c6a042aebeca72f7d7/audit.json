@@ -1,0 +1,11 @@
+{
+  "run_id": "7002b6e749b141c6a042aebeca72f7d7",
+  "task_id": "t1",
+  "input_hash": "",
+  "seed": 0,
+  "snapshot_path": "",
+  "status": "failed",
+  "failure_mode": "io_error",
+  "files": [],
+  "meta": {}
+}

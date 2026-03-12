@@ -1,0 +1,2 @@
+def dummy():
+    return '7fc3721fe6a5ad03'

@@ -1,0 +1,4 @@
+Task: Refactor app.py. Module: none. Description: Refactor the main file. Context:
+No context.
+
+Instruction: Produce ONLY the complete and final Python code. Start directly with the first line of code. No explanations. No markdown. No backticks. No comments except docstrings.

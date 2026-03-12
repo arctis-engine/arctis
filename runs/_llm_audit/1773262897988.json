@@ -1,0 +1,28 @@
+{
+  "model": "llama3.1:8b",
+  "seed": 2408334063,
+  "json_mode": false,
+  "prompt_length": 7808,
+  "prompt_hash": "e3f3b09918ae9315ff84a5e1ef5989ab6a26fa807ee105b0181daac9ad77e206",
+  "attempts": [
+    {
+      "attempt": 1,
+      "latency_s": 60.093,
+      "status": "failed",
+      "error": "timed out"
+    },
+    {
+      "attempt": 2,
+      "latency_s": 60.033,
+      "status": "failed",
+      "error": "timed out"
+    },
+    {
+      "attempt": 3,
+      "latency_s": 60.062,
+      "status": "failed",
+      "error": "timed out"
+    }
+  ],
+  "result": "failed"
+}

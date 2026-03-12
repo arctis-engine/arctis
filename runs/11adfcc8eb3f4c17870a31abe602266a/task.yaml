@@ -1,0 +1,5 @@
+instruction: Improve the existing get_env() function in src/flask/helpers.py. Add
+  type hints, a clear docstring, and improve readability. Do NOT change behavior.
+  Do NOT rename the function. Modify ONLY the get_env() function.
+name: improve_get_env
+target_file: src/flask/helpers.py

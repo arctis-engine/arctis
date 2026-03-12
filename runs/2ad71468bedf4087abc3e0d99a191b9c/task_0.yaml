@@ -1,0 +1,8 @@
+description: 'Create a simple Python module with two files: utils.py containing a
+  function greet(name), and main.py that imports greet and prints the greeting.'
+id: t5
+meta: {}
+module: null
+name: Create module
+target_file: null
+type: codegen.multi_file

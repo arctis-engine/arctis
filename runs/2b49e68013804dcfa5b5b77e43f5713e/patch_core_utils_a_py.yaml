@@ -1,0 +1,4 @@
+base_hash: fa48a0a4236e308ab4c03722cc644a8096d2a8216eaa3d0d4e6f4ca91730295a
+diff: ''
+new_content: "def a() -> str:\n    return \"a\""
+target_file: core/utils/a.py

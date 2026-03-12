@@ -1,0 +1,15 @@
+{
+  "run_id": "2c6ab2e5848a49149213655db8e8d4cc",
+  "task_id": "t1",
+  "input_hash": "bf666c93fb278164cd97eb9e278cf13fd5b06cf18ad46ecbf1e4eb7c1d5b237c",
+  "seed": 1232933091,
+  "snapshot_path": "runs/2c6ab2e5848a49149213655db8e8d4cc/codebase_manifest.json",
+  "status": "success",
+  "failure_mode": null,
+  "files": [
+    {
+      "path": "hello.py"
+    }
+  ],
+  "meta": {}
+}

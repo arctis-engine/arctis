@@ -1,0 +1,9 @@
+description: Generate a function
+files:
+- module.py
+message: generated_function created
+module: ''
+name: 'test_task::'
+status: success
+target_file: module.py
+type: codegen.single

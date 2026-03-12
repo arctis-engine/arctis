@@ -1,0 +1,15 @@
+{
+  "run_id": "a3fbb0a630144038ada390208738c34d",
+  "task_id": "t1",
+  "input_hash": "c4806a881a582e51ffc068f2380381c5e114aa10b1a5cb9972a61cea50e8abd8",
+  "seed": 1313213901,
+  "snapshot_path": "runs/a3fbb0a630144038ada390208738c34d/codebase_manifest.json",
+  "status": "success",
+  "failure_mode": null,
+  "files": [
+    {
+      "path": "app.py"
+    }
+  ],
+  "meta": {}
+}

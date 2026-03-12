@@ -1,0 +1,4 @@
+Task: Create Flask App. Module: none. Description: Create a minimal Flask app with one route returning 'Hello from Arctic OS'.. Context:
+No context.
+
+Instruction: Produce ONLY the complete and final Python code. Start directly with the first line of code. No explanations. No markdown. No backticks. No comments except docstrings.
