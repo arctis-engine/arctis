@@ -1,13 +1,28 @@
-from core.models import Task
-from core.orchestrator import run_task
+from arctis.module import run
 
-task = Task(
-    id="t5",
-    name="Create module",
-    type="codegen.multi_file",
-    description="Create a simple Python module with two files: utils.py containing a function greet(name), and main.py that imports greet and prints the greeting.",
-    target_file=None,
-)
+task = {
+    "mode": "v1",
+    "files": [
+        "dev/flask/src/flask/app.py"
+    ],
+    "instructions": {
+        "dev/flask/src/flask/app.py": (
+            "Füge folgende Helper-Funktion am Ende der Datei hinzu:\n\n"
+            "def is_debug_mode(app):\n"
+            "    return app.debug"
+        )
+    },
+    "metadata": {
+        "patch_mode": "append"
+    }
+}
 
-result = run_task(task, root="sandbox_v3")
-print(result)
+results = run(task)
+result = results[0]
+
+print("\n--- ARCTIS RESULT ---\n")
+print("File:", result.file_path)
+print("Mode:", result.mode)
+print("\n--- NEW SOURCE PREVIEW ---\n")
+print(result.new_source[:500])
+print("\n--- END ---\n")
