@@ -191,6 +191,7 @@ Python: [Ruff](https://docs.astral.sh/ruff/). UI: ESLint in `ui/pipeline_a/`.
 - Launch gates (A1.6): [`docs/Launch_readiness.md`](docs/Launch_readiness.md)
 - Packaging & Delivery (A2): [`docs/Packaging.md`](docs/Packaging.md)
 - Customer Onboarding Kit (A2.4): [`docs/customer/README.md`](docs/customer/README.md)
+- Commercial Readiness (A3): [`docs/commercial/README.md`](docs/commercial/README.md)
 
 ## Control Plane API (optional Launch-Umgebung)
 

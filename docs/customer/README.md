@@ -13,6 +13,10 @@ Technische Tiefe: verlinkte Dokumente unter `docs/`.
 | **Python-Paket (Wheel)** | [`Packaging.md`](../Packaging.md) — A2.2 |
 | **Gehostete API (SaaS)** | [`Packaging.md`](../Packaging.md) — A2.3; Basis-URL und API-Key von euch |
 
+## Commercial Readiness (Phase A3)
+
+Pricing, SLA, Evidence-Kernbotschaften, Release-Policy für Vertrieb und Vertrag: **[`../commercial/README.md`](../commercial/README.md)**.
+
 ---
 
 ## Ghost CLI (Customer-Execute)
