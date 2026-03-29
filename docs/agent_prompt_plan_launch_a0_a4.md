@@ -39,6 +39,7 @@ Dieses Dokument ist die **Single Source of Truth** für **Betrieb, Doku, Packagi
 | DR | [`docs/DR.md`](DR.md) |
 | Release & Tags | [`docs/RELEASE.md`](RELEASE.md) |
 | Staging E2E (G4) | [`docs/ghost_staging_e2e.md`](ghost_staging_e2e.md) |
+| Pilot-Gate A/B (Checklisten) | [`docs/pilot_gates.md`](pilot_gates.md) |
 | Package / Wheel-Strategie | [`docs/arctis_package_strategy.md`](arctis_package_strategy.md) |
 | Launch-Checkliste (Prod) | [`DEPLOYMENT_CHECKLIST.md`](../DEPLOYMENT_CHECKLIST.md) |
 | Launch-Skript | [`arctis/scripts/launch_check.py`](../arctis/scripts/launch_check.py) |

@@ -1,5 +1,7 @@
 # Ghost — Staging-E2E (Checkliste)
 
+**Pilot-Gates (offiziell):** [`pilot_gates.md`](pilot_gates.md) — **Gate A** (Security/Hygiene) und **Gate B** (Ghost E2E ohne Repo-Hilfe).
+
 ```
 Status: Noch nicht ausgeführt — Staging-API-Run steht aus.
 Datum: —

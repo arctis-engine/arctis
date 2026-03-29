@@ -15,7 +15,7 @@
 
 ### Pilot (operativ): Gitleaks, ein E2E-Flow, Support-Scope
 
-**A — Gitleaks (Blocker vor Pilot):** Der Workflow [`.github/workflows/gitleaks.yml`](.github/workflows/gitleaks.yml) muss **grün** sein — sonst kein Pilot (Governance / Audit / Vertrauen). Bei Rot: lokal `gitleaks detect --source . --config .gitleaks.toml` ausführen und Befund klären, bevor ihr Kunden einbindet.
+**A — Gitleaks (Blocker vor Pilot):** Der Workflow [`.github/workflows/gitleaks.yml`](.github/workflows/gitleaks.yml) muss **grün** sein — sonst kein Pilot (Governance / Audit / Vertrauen). Bei Rot: lokal `gitleaks detect --source . --config .gitleaks.toml` ausführen und Befund klären, bevor ihr Kunden einbindet. **Vollständige Checklisten:** [`docs/pilot_gates.md`](docs/pilot_gates.md) (**Gate A** / **Gate B**).
 
 **B — Ein End-to-End-Flow (Readiness-Test):** Voraussetzung: erreichbare **Arctis-API**, **`ARCTIS_API_KEY`**, gültige **`workflow_id`** in `ghost.yaml` (nach `init-demo`). Dann im **Ghost-Arbeitsverzeichnis**:
 
