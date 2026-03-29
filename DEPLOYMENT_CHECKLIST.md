@@ -35,11 +35,18 @@ Siehe [`docs/Observability.md`](docs/Observability.md).
 - [ ] **Grafana** (oder vergleichbar) an eure Prometheus-Instanz angebunden; Dashboards für Latenz/Fehler/429 nach Bedarf
 - [ ] **Alertmanager** / ähnliche Regeln für 5xx, Latenz, ggf. Budget-Metriken (Runbook außerhalb Repo)
 
+## DR & Backup (A1.5)
+
+Siehe [`docs/DR.md`](docs/DR.md) (Backup-Strategie, Restore, **Verification** / Restore-Test, RPO/RTO).
+
+- [ ] **Backup-Job(s)** für Postgres (und bei JSONL-Audit das Audit-Verzeichnis) nach DR.md automatisiert; **Fehler-Alert** bei ausbleibendem oder fehlgeschlagenem Lauf
+- [ ] **Restore-Test** (DR-Drill) nach DR.md durchgeführt oder mit Datum terminiert; Ergebnis im internen Runbook dokumentiert
+- [ ] **`docs/DR.md`** mit aktuellem Betriebsmodell abgeglichen (Review bei Release oder quartalsweise)
+
 ## Weitere Punkte
 
 - [ ] Billing-Webhooks in Stripe-Dashboard zur API-URL konfiguriert (wenn Billing aktiv)
 - [ ] Alembic upgrade head applied (siehe A1.1, falls noch nicht abgehakt)
 - [ ] Playwright smoke tests green
 - [ ] Locust load test stable (<5% errors)
-- [ ] DR test OK
 - [ ] Statuspage updated

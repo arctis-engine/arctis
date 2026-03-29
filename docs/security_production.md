@@ -47,6 +47,8 @@ Auth0/Supabase, API-Keys vs. JWT, Callbacks, Tenant: [`Authentication.md`](Authe
 
 Sentry, Prometheus-Scrape, Grafana, Alerts: [`Observability.md`](Observability.md) (A1.4).
 
+Backup, Restore, DR-Drill: [`DR.md`](DR.md) (A1.5).
+
 ## OpenAPI / Docs
 
 - **Prod (Default):** Doc-Routen sind deaktiviert; direkte Requests auf `/docs`, `/redoc`, `/openapi.json` liefern **404** (kein 401-Hinweis).

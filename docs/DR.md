@@ -2,6 +2,8 @@
 
 Operational guide for restoring Arctis after data loss, region failure, or corruption. Keep runbooks and credentials outside this repository in your secure ops store.
 
+**Launch-Abgleich (A1.5):** Backup-Job(e), Restore-Test/DR-Drill und diese Datei aktuell halten — siehe [`DEPLOYMENT_CHECKLIST.md`](../DEPLOYMENT_CHECKLIST.md) Abschnitt **DR & Backup** und [`Deployment.md`](Deployment.md).
+
 ## Components
 
 | Component | Role | Notes |
@@ -28,6 +30,18 @@ Operational guide for restoring Arctis after data loss, region failure, or corru
 4. **Secrets**  
    - API hash seeds, `ARCTIS_ENCRYPTION_KEY` (Fernet), DB URLs, Sentry DSN: store in a **secret manager**, not only in backups.
 
+### Backup jobs (scheduled)
+
+Implement backups as **automated jobs**, not manual ad-hoc runs:
+
+| Ziel | Minimum |
+|------|---------|
+| **PostgreSQL** | Täglicher logical dump (`pg_dump -Fc`) oder gleichwertiger Managed-Backup-Plan des Providers. |
+| **Audit JSONL** (wenn `ARCTIS_AUDIT_STORE=jsonl`) | Tägliche Replikation/Snapshot des Verzeichnisses `ARCTIS_AUDIT_JSONL_DIR` (siehe oben). |
+| **Überwachung** | Alert, wenn ein Backup-Job **fehlschlägt** oder ausbleibt (Monitoring/Logs). |
+
+Typische Umsetzung: Kubernetes `CronJob`, systemd timer, CI-geplanter Job, oder natives Backup-Fenster des Datenbank-Hosts. **Kein** festes Cron im Repo — Umgebungsspezifisch im Runbook.
+
 ## Restore procedure
 
 1. **Provision** a new Postgres instance (or empty database) and network access for Arctis.
@@ -41,7 +55,9 @@ Operational guide for restoring Arctis after data loss, region failure, or corru
 5. **Start** Arctis (e.g. `uvicorn` via Docker `CMD` as in the project `Dockerfile`).  
 6. **Restore audit JSONL** (if applicable) to the configured directory before relying on `/audit/export`.
 
-## Verification (DR test)
+## Verification (DR test / Restore-Test)
+
+Ein **Restore-Test** beweist, dass Backups **eingespielt** werden können — nicht nur, dass sie existieren. Führt die folgende Checkliste nach einem **Restore auf eine isolierte Umgebung** (oder einem geklonten Schema) aus.
 
 Run a **DR drill at least once per release** (or quarterly minimum):
 

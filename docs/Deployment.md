@@ -79,6 +79,12 @@ Sentry, Prometheus-Scrape (`/metrics/prometheus`), Grafana außerhalb des Repos,
 
 ---
 
+## Disaster recovery & backup (A1.5)
+
+Backup-Jobs, Restore-Ablauf, DR-Drill, RPO/RTO: **[DR.md](DR.md)** — ergänzt durch [`DEPLOYMENT_CHECKLIST.md`](../DEPLOYMENT_CHECKLIST.md) (Abschnitt DR & Backup).
+
+---
+
 ## API base URL (OpenAPI servers)
 
 - **Local:** `http://127.0.0.1:8000` (typical `uvicorn` default).
