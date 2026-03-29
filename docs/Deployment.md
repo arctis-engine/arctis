@@ -1,5 +1,11 @@
 # Deployment notes
 
+## Packaging & customer delivery (Phase A2)
+
+Docker, Wheel, SaaS-Einordnung, Customer-Onboarding: **[Packaging.md](Packaging.md)** und **[customer/README.md](customer/README.md)**.
+
+---
+
 ## Infrastructure (staging / production) — A1.1
 
 Production- und **staging**-ähnliche Umgebungen nutzen dieselben **Variablennamen**; Werte (URL, Origins, Secrets) werden pro Umgebung gesetzt. Die **reale** Staging-Laufzeit (Cluster, VM, PaaS) liegt außerhalb dieses Repos — hier die verbindliche Checkliste für Betrieb und Review.

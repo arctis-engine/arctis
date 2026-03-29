@@ -1,5 +1,7 @@
 # Multi-stage production image (non-root). Use `alembic upgrade head` for schema — not create_all.
-# docker build -t arctis:latest .
+# Tag an pyproject-Version anbinden, z. B.:
+#   docker build -t arctis:0.1.0 .
+#   docker tag arctis:0.1.0 arctis:latest
 
 FROM python:3.11-slim AS builder
 

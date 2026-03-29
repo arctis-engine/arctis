@@ -25,6 +25,8 @@
 
 - Root-[`README.md`](../README.md) macht klar: **Wheel-Inhalt** (API + Ghost) vs. „nur Ghost nutzen“ (dann ggf. Option B oder dokumentierter Minimal-Install aus Monorepo).
 
+Build-Kommandos (Wheel, Docker-Tags): [`Packaging.md`](Packaging.md) (Phase **A2**).
+
 ## PyPI-Metadaten
 
 - `pyproject.toml` sollte `readme`, sinnvolle **keywords**/classifiers und sobald bekannt **Repository-URL** tragen — siehe aktuelle `[project]`-Felder.
