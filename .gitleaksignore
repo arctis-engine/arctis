@@ -1,4 +1,22 @@
-# path: reports/phase5_scenarios_table.md
-# False positive: idempotency_key test value "phase5-s1-b-2-mixed" (line 9) matches generic-api-key.
+# =============================================================================
+# Arctis — `.gitleaksignore` (fingerprint overrides)
+# =============================================================================
+# PRIMARY: Path-based suppression for whole directories lives in `.gitleaks.toml`
+# (`[allowlist].paths` for reports/, tests/, input/, output/). That is CI-stable when
+# line numbers change and is the preferred mechanism for this repository.
+#
+# THIS FILE: Per-finding fingerprints (Gitleaks v8+). Use for:
+#   - Redundant audit trail for known false positives (same as path rules), and/or
+#   - Any future false positive that appears OUTSIDE the allowlisted paths.
+#
+# Format (typical dir / unstaged scan, no commit prefix):
+#   path/to/file.ext:rule-id:line
+# List both separators so Windows (\) and Linux (/) match deterministically.
+# =============================================================================
+
+# Phase 5 governance artifacts — idempotency_key value "phase5-s1-b-2-mixed" triggers
+# generic-api-key (keyword + entropy). Harmless scenario/test data; also covered by reports/ path.
 reports/phase5_scenarios_table.md:generic-api-key:9
 reports\phase5_scenarios_table.md:generic-api-key:9
+reports/phase5_scenarios.json:generic-api-key:43
+reports\phase5_scenarios.json:generic-api-key:43

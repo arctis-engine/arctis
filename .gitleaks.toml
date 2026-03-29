@@ -1,0 +1,28 @@
+# =============================================================================
+# Arctis — Gitleaks enterprise configuration
+# =============================================================================
+# Extends the embedded default ruleset. Adds path allowlists only for designated
+# non-production trees (fixtures, reports, sandbox I/O). These paths must never
+# be used to store real production credentials; governance policy owns that boundary.
+# =============================================================================
+
+title = "arctis-gitleaks"
+
+[extend]
+useDefault = true
+
+# Merged with the default global allowlist. Paths are matched against the file path
+# Gitleaks uses for the finding (repo-relative; separators may be \ on Windows).
+
+[allowlist]
+description = "Arctis: designated non-production trees (regex per top-level dir). Policy: no production credentials in these paths."
+paths = [
+  # reports/: generated tables/JSON (run_ids, idempotency_key strings); not for live secrets.
+  '''(?:^|[\\/])reports(?:[\\/].*)?$''',
+  # input/: fixture inputs and reproducible pipeline payloads.
+  '''(?:^|[\\/])input(?:[\\/].*)?$''',
+  # output/: dry-run and pipeline output artifacts.
+  '''(?:^|[\\/])output(?:[\\/].*)?$''',
+  # tests/: mocks and intentional dummy tokens; real keys must not be committed here.
+  '''(?:^|[\\/])tests(?:[\\/].*)?$''',
+]
