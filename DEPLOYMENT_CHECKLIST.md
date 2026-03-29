@@ -18,11 +18,18 @@ Werte nur im **Secret Store** der Umgebung, nicht im Repo ([`docs/Deployment.md`
 - [ ] `STRIPE_SECRET_KEY` und `STRIPE_WEBHOOK_SECRET` (oder **N/A** mit Begründung, wenn kein Billing; `launch_check` erwartet sie für ein volles Gate — siehe Deployment-Doku)
 - [ ] `OPENAI_API_KEY` o. Ä. nur falls ihr globale Provider-Keys setzt (sonst Tenant-Keys in der DB)
 
+## Auth & Identity (A1.3)
+
+Siehe [`docs/Authentication.md`](docs/Authentication.md).
+
+- [ ] **Auth0** *oder* **Supabase** festgelegt; alle erforderlichen Umgebungsvariablen gesetzt (siehe [`docs/Authentication.md`](docs/Authentication.md), `launch_check` Schritt 7)
+- [ ] Im IdP: **Callback URLs**, **Logout URLs**, **Site URL** / Web Origins zum Dashboard-Host; konsistent mit [`ALLOWED_ORIGINS`](docs/Deployment.md) für API-Aufrufe
+- [ ] **Tenant-API-Keys** in der DB für Staging/Prod angelegt; Scopes geprüft (`pytest tests/api/`)
+
 ## Weitere Punkte
 
 - [ ] PROMETHEUS_ENABLED=true
 - [ ] Billing-Webhooks in Stripe-Dashboard zur API-URL konfiguriert (wenn Billing aktiv)
-- [ ] Auth0 callback URLs configured
 - [ ] Alembic upgrade head applied (siehe A1.1, falls noch nicht abgehakt)
 - [ ] Playwright smoke tests green
 - [ ] Locust load test stable (<5% errors)

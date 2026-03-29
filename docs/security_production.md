@@ -43,6 +43,8 @@ Das Modul `main.py` ist **Legacy**; mit `ENV=prod` wird sein Import **hart abgel
 
 Vollständige Secret-Policy und Tabellen: [`Deployment.md`](Deployment.md) (Abschnitt **Secrets (A1.2)**).
 
+Auth0/Supabase, API-Keys vs. JWT, Callbacks, Tenant: [`Authentication.md`](Authentication.md) (A1.3).
+
 ## OpenAPI / Docs
 
 - **Prod (Default):** Doc-Routen sind deaktiviert; direkte Requests auf `/docs`, `/redoc`, `/openapi.json` liefern **404** (kein 401-Hinweis).

@@ -67,6 +67,12 @@ Vollständige Liste der von `launch_check` geprüften Variablen: Docstring in [`
 
 ---
 
+## Authentication & identity (A1.3)
+
+API-Keys, Auth0/Supabase, Callbacks, Tenant-Modell und Abgrenzung JWT: **[Authentication.md](Authentication.md)**.
+
+---
+
 ## API base URL (OpenAPI servers)
 
 - **Local:** `http://127.0.0.1:8000` (typical `uvicorn` default).

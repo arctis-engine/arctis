@@ -185,6 +185,7 @@ Python: [Ruff](https://docs.astral.sh/ruff/). UI: ESLint in `ui/pipeline_a/`.
 - Ghost-CLI-Referenz: [`docs/ghost_cli_reference.md`](docs/ghost_cli_reference.md)
 - Mitwirkung & CI lokal: [`CONTRIBUTING.md`](CONTRIBUTING.md)
 - Release & Tags: [`docs/RELEASE.md`](docs/RELEASE.md)
+- Auth & Identity (A1.3): [`docs/Authentication.md`](docs/Authentication.md)
 
 ## Control Plane API (optional Launch-Umgebung)
 
