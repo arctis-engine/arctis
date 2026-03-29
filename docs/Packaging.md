@@ -9,11 +9,21 @@ Diese Seite entspricht **A2.1–A2.3**; das **Onboarding-Kit** liegt unter [`cus
 
 ## A2.1 — Docker
 
+**Offizielles Image (GHCR)** nach Release-Tag — `org`/`repo` entsprechen dem GitHub-Repository (hier: `ArdentCrab/arctis` → Registry-Pfad kleingeschrieben):
+
+```bash
+docker pull ghcr.io/ardentcrab/arctis:0.1.0
+# optional, wenn ihr :latest für stabile Tags pflegt (siehe Workflow):
+docker pull ghcr.io/ardentcrab/arctis:latest
+```
+
+Lokal bauen:
+
 ```bash
 docker build -t arctis:0.1.0 .
 ```
 
-- **Tag:** `arctis:<version>` an die **Paketversion** koppeln (z. B. `0.1.0` aus `pyproject.toml`). Zusätzlich `latest` nur, wenn ihr eine klare Release-Policy habt.  
+- **Tag:** `arctis:<version>` an die **Paketversion** koppeln (z. B. `0.1.0` aus `pyproject.toml`). CI publiziert zusätzlich **`latest`** nach Policy in [`.github/workflows/docker-publish.yml`](../.github/workflows/docker-publish.yml).  
 - **Referenz:** [`Dockerfile`](../Dockerfile) — Multi-Stage, non-root, `ENV=prod`, Healthcheck auf `GET /health`.  
 - **Nach dem Start:** `DATABASE_URL` auf Postgres setzen (Prod), **`alembic upgrade head`** gegen diese DB — siehe [`Deployment.md`](Deployment.md).  
 - **Run:** siehe [`Deployment.md`](Deployment.md) Abschnitt Container image.

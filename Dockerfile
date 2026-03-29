@@ -13,8 +13,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 WORKDIR /build
 
-COPY pyproject.toml ./
+COPY pyproject.toml README.md ./
 COPY arctis ./arctis
+COPY arctis_ghost ./arctis_ghost
 
 RUN pip install --no-cache-dir --upgrade pip \
     && pip install --no-cache-dir .

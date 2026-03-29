@@ -30,6 +30,9 @@ dependencies = [
     "prometheus-client>=0.21",
 ]
 
+[project.urls]
+Repository = "https://github.com/ArdentCrab/arctis"
+
 [project.scripts]
 ghost = "arctis_ghost.cli:main"
 

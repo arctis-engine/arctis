@@ -24,6 +24,19 @@
 4. Nach erfolgreichem **G4** (falls als Gate vereinbart): Tag setzen — `git tag -a vX.Y.Z -m "Release X.Y.Z"` und pushen.
 5. Release-Notes (GitHub/GitLab): Breaking Changes, API vs. Ghost-CLI, Sicherheitshinweise; optional Links zu [`arctis_ghost_demo_60.md`](arctis_ghost_demo_60.md) / Demo-Matrix.
 
+## GitHub Actions (automatisch)
+
+Nach **`git push origin vX.Y.Z`** (nach merge auf `main`/`master`):
+
+| Workflow | Datei | Ergebnis |
+|----------|--------|----------|
+| **Release** | [`.github/workflows/release.yml`](../.github/workflows/release.yml) | GitHub **Release** mit **Wheel**, **sdist** (`.tar.gz`) und **`SHA256SUMS`** |
+| **Docker** | [`.github/workflows/docker-publish.yml`](../.github/workflows/docker-publish.yml) | Image **`ghcr.io/<org>/<repo>:<version>`** und **`latest`** (kein `latest` bei Pre-Release-Tags mit `-` im Namen, z. B. `v1.0.0-rc.1`) |
+
+**Voraussetzung:** Der Tag **`vX.Y.Z`** muss exakt zu **`[project].version`** in [`pyproject.toml`](../pyproject.toml) passen (`v0.1.0` ↔ `0.1.0`). Sonst schlagen beide Workflows mit einem Fehler ab.
+
+**GHCR:** Erstes Push: unter **Packages** im Repo/Org ggf. Sichtbarkeit **public** setzen, damit `docker pull` ohne Login funktioniert.
+
 ## Ghost-CLI
 
 - Neue Flags oder `ghost.yaml`-Felder: im CHANGELOG unter **Added**/**Changed** erwähnen; Verweis auf [`ghost_cli_reference.md`](ghost_cli_reference.md).
